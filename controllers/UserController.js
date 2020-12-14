@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const models = require('../models');
 
-exports.signin = async(req, res, next) =>{
+exports.singin = async(req, res, next) =>{
     try{
         const user = await models.user.findOne({where: {email:req.body.email}});
         if (user) {
@@ -17,11 +17,12 @@ exports.signin = async(req, res, next) =>{
                     vehiculo: user.vehiculo
                 },'config.secret',{
                     expiresIn: 86400,
-                });
+                }
+                );
                 res.status(200).send({
                     auth: true,
-                    tokenReturn: token,
-                    user: user
+                    accessToken: token,
+                    // user: user
                 })
             }else{
                 res.status(401).json({
@@ -36,7 +37,7 @@ exports.signin = async(req, res, next) =>{
     }catch(error){
         res.status(500).send({
         message:'Error->'
-        })
+        }),
     next(error);
     }
 };
