@@ -3,6 +3,10 @@ const models = require('../../models');
 const UserController = require('../../controllers/UserController.js');
 const bcrypt = require('bcryptjs');
 
+
+
+
+
 router.get('/',async(req, res) => {
     const user = await models.user.findAll();
     res.status(200).json(user);

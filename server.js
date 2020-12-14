@@ -37,6 +37,6 @@ app.get('/', function(req, res) {
 
 app.listen(app.get('PORT'), () => {
     console.log(`Running on http://localhost:${app.get('PORT')}`)
-});
+})
 
 module.exports = app;

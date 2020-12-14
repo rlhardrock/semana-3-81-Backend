@@ -34,23 +34,18 @@ Crear API para integrar con Frontend
 configurar  unicamente development  en config / config.json
 
 developmen:{ 
-    username: DDBBuser   lo entrega la app
-    password: DDBBpass
-    database: DDBBname
-    host: DDBBhost          remotemysql.com
+    Username: nD3UOjiEIQ
+
+Database name: nD3UOjiEIQ
+
+Password: KpI9h6pUfP
+
+Server: remotemysql.com
+
+Port: 3306
     dialect:  mysql   posgres   mariadb
 }
 
-Created!
-You have successfully created a new database. The details are below.
-
-Username: yfhrKrs3LM
-
-Database name: yfhrKrs3LM
-
-Password: QlIMZPpNC7
-
-Server: remotemysql.com
 
 Port: 3306
 
@@ -73,6 +68,9 @@ npx sequelize-cli seed:generate --name seed-user
 
 bcrypt generator crear una nueva contraseña y reemplazar la que esta por defecto
 
+
+
+ejecutar la semilla de prueba
 npx sequelize-cli db:seed:all
 
 --> en seeders/migrations el nombre de la tabla esta pluralizado,  dejarlo en singular

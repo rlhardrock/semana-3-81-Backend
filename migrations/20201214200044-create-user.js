@@ -17,14 +17,11 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      profession: {
-        type: Sequelize.STRING
-      },
       rol: {
         type: Sequelize.STRING
       },
-      vehiculo: {
-        type: Sequelize.STRING
+      status: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

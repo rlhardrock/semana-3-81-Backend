@@ -8,13 +8,13 @@ exports.singin = async(req, res, next) =>{
         if (user) {
             const passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
             if (passwordIsValid) {
+                /* const token = await  */
                 const token = jwt.sign({
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                    profession: user.profession,
                     rol: user.rol,
-                    vehiculo: user.vehiculo
+                    status: user.status
                 },'config.secret',{
                     expiresIn: 86400,
                 }
@@ -26,17 +26,17 @@ exports.singin = async(req, res, next) =>{
                 })
             }else{
                 res.status(401).json({
-                    error: 'Error de datos'
+                    error: 'Error 401'
                 })
             }
         }else{
             res.status(404).json({
-                error: 'Error de datos'
+                error: 'Error 404'
             })
         }
     }catch(error){
         res.status(500).send({
-        message:'Error->'
+        message:'Error-500'
         }),
     next(error);
     }
