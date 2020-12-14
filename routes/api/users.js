@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { user } = require('../../models');
-const UserController = require('../../controller/UserController.js');
+const UserController = require('../../controllers/UserController.js');
 const bcrypt = require('bcryptjs');
 
 router.get('/',async(req, res) => {
@@ -15,6 +15,6 @@ router.post('/register',async(req, res) => {
 });
 
 
-router.post('/signin', userController.signin);
+router.post('/signin', UserController.signin);
 
 module.exports = router;
