@@ -7,7 +7,7 @@ describe('login Endpoints', () => {
             .send({
                 email: 'ejemplo@gmail.com',
                 password: 'micontraseña',
-
+// 20201213060301 
             })
         expect(res.statusCode).toEqual(200)
         expect(res.body).toHaveProperty('accessToken');
