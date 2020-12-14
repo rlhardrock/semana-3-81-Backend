@@ -21,6 +21,11 @@ crear folder    controllers
 crear file dentro del folder UserController.js
 
 
+confirmar en package.json si  existe  >Debug   "scripts" : { "start-dev": "node index.js", "dev": "nodemon server.js" }
+
+npm run dev
+
+
 server.js  es el mismo index.js (start point)
 
 
@@ -71,3 +76,4 @@ bcrypt generator crear una nueva contraseña y reemplazar la que esta por defect
 npx sequelize-cli db:seed:all
 
 --> en seeders/migrations el nombre de la tabla esta pluralizado,  dejarlo en singular
+
