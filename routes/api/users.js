@@ -19,6 +19,6 @@ router.post('/register',async(req, res) => {
 });
 
 
-router.post('/singin', UserController.singin);
+router.post('/signin', UserController.signin);
 
 module.exports = router;

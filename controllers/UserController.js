@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const models = require('../models');
 
-exports.singin = async(req, res, next) =>{
+exports.signin = async(req, res, next) =>{
     try{
         const user = await models.user.findOne({where: {email:req.body.email}});
         if (user) {
